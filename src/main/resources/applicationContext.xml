@@ -35,7 +35,7 @@
 
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
-            <tx:method name="transfer" />
+            <tx:method name="transfer" propagation="REQUIRED" isolation="DEFAULT" timeout="-1" read-only="false" />
             <tx:method name="save*" />
             <tx:method name="update*" />
             <tx:method name="delete*" />
